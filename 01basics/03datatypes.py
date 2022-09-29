@@ -103,5 +103,5 @@ Datatypes -> primitive and derived
 # num = list(range(6))
 # print(num)
 
-rev = tuple(range(10, 0, -1))
-print(rev)
+# rev = tuple(range(10, 0, -1))
+# print(rev)
