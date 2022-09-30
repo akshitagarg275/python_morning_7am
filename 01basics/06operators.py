@@ -7,6 +7,10 @@ binary -> It will have two operands
     relational
     logical
     bitwise
+
+membership
+identity
+
 '''
 
 # TODO: unary
@@ -118,4 +122,38 @@ Falsy values -> False, 0 , None , ''
 
 # print(10 >> 1)
 
-print(10 << 1)
+# print(10 << 1)
+
+# TODO: membership operator (in)
+
+nums = [12, 13, 14, 15]
+# print(13 in nums)
+# print (16 in nums)
+
+# name = "John"
+# print('j' in name)
+
+# print ('J' not in name)
+
+# TODO: identity operator (is)
+
+# a = 2
+# print("id of a : ", id(a))
+
+# b =2
+# print("id of b : ",id(b))
+
+# print ( a is b)
+
+# l1 = [1, 2, 3]
+# print("l1: ",id(l1))
+
+# l2 = [1, 2, 3]
+# print("l2: ",id(l2))
+
+# print(l1 is l2)
+
+# l3 = l1
+# print("l3 is : ",id(l3))
+
+# print(l1 is l3)
