@@ -91,13 +91,16 @@ payment method should be correct
 '''
 
 
-isCart = True
-isLoggedIn = True
-isCard = False
+# isCart = True
+# isLoggedIn = True
+# isCard = False
 
-if (isCard and isCart and isLoggedIn):
-    print("Order place successfully")
-else:
-    print("Order didn't placed")
+# if (isCard and isCart and isLoggedIn):
+#     print("Order place successfully")
+# else:
+#     print("Order didn't placed")
 
+
+# if 6%2 is 0:
+#     print("even")
 
