@@ -67,8 +67,6 @@ for loop -> it is used on iterables (list, tuple, set, dictionary)
 
 # TODO: WAP to count no digits in a number entered
 
-from itertools import count
-
 
 num = int(input("enter a num: "))
 # 12 -> 2
@@ -80,3 +78,35 @@ while num > 0 :
     num = num // 10
 
 print("No of digits: ",count)
+
+# TODO: 234 = 2+ 3+ 4 =9
+
+# num = int(input("enter a num: "))
+
+# sum = 0
+# while num > 0 :
+#     rem = num % 10
+#     sum =sum + rem
+#     num = num // 10
+
+# print("sum of digits: ",sum)
+
+
+# TODO: WAP tp reverse a num
+# 234 -> 432
+
+# num = int(input("enter a num: "))
+
+# reverseNum = 0
+# while num > 0 :
+#     rem = num % 10
+#     reverseNum = (reverseNum * 10) + rem
+#     print("rev: ", reverseNum)
+#     num = num // 10
+
+# else: 
+#     print("reverse is: ", reverseNum)
+
+# TODO: WAP to find whether given num is pallindrome or not
+# 234 = 432
+# 121 = 121
