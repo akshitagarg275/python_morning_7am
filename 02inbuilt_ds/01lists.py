@@ -22,6 +22,8 @@ fruits = ["mango", "apple", "banana", "papaya"]
 
 fruits = ["mango", "apple", "banana", "papaya", "grapes", "guava"]
 
+# for f in fruits:
+#     print(f)
 
 # print(fruits[1 : 4])
 # print(fruits[: :])
@@ -30,4 +32,49 @@ fruits = ["mango", "apple", "banana", "papaya", "grapes", "guava"]
 # print(fruits[ : 3])
 # print(fruits[-5 : -2])
 # print(fruits[-5 : -1])
-print(fruits[: : 2])
+# print(fruits[: : 2])
+
+fruits = ["mango", "apple", "banana", "papaya", "grapes", "guava"]
+
+# fruits.append("cherry")
+# print(fruits)
+
+# fruits.extend(["cherry" , "plum"])
+# print(fruits)
+
+# fruits.clear()
+# print(fruits)
+
+# print(fruits.count("mango"))
+
+# my_list = fruits.copy()
+# fruits.append("cfkdmgvn")
+# print(my_list)
+
+# my_list.append("fsf")
+# print(fruits)
+
+# print(fruits.index("apple"))
+# print(fruits.index("apple" , 2))
+
+# print(fruits)
+# print(fruits.pop(1))
+# print(fruits)
+
+# fruits.remove("papaya")
+# print(fruits)
+
+# print(fruits)
+# fruits.insert(2 , "pineapple")
+# print(fruits)
+
+# print(fruits)
+# fruits.sort()
+# print(fruits)
+
+# print(sorted(fruits))
+
+# print(fruits)
+# fruits.reverse()
+# print(fruits)
+
