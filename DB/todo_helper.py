@@ -24,8 +24,23 @@ def read_todos():
     cur.execute("SELECT * from " + table_name)
 
     for row in cur.fetchall():
-        print(row[0] + " --> ", row[1])
+        print(str(row[0]) + " --> ", row[1])
 
 # update the data
+def update_task(idx , updated_task ):
+    # update table_name set column_name=new_value where ID=index
+    cur.execute("UPDATE " +  table_name + " SET taskname = (?) WHERE id = (?)", [updated_task,idx] )
+    print("Task updated successfully")
+    con.commit()
+
 
 # delete the data
+def delete_task(idx):
+    # delete from table_name where id = index
+    cur.execute("DELETE from " + table_name + " WHERE id = (?)" , [idx])
+    print("Task deleted successfully!")
+    con.commit()
+
+def close_connection():
+    cur.close()
+    con.close()
