@@ -8,14 +8,69 @@
 </head>
 <body>
     <form >
+        <h1>User Details</h1>
+
         <label for="fname"> First name: </label>
-        <input type="text" name="" id="fname">
+        <input type="text" name="" id="fname" required="">
         <br><br>
 
         <label for="lname"> Last name: </label>
         <input type="text" name="" id="lname">
+        <br><br>
 
-        <input type="">
+        <label for="email"> Email: </label>
+        <input type="email" name="" id="email">
+        <br><br>
+
+        <label for="password"> Password: </label>
+        <input type="password" name="" id="password">
+        <br><br>
+
+        <fieldset>
+            <legend>Gender</legend>
+            <input type="radio" id="male" name="gen">
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gen">
+            <label for="female">Female</label>
+
+            <input type="radio" id="other" name="gen">
+            <label for="other">other</label>
+        </fieldset>
+        <br><br>
+
+        <label for="phone"> Phone: </label>
+        <input type="number" name="" id="phone">
+        <br><br>
+
+        <label for="address"> Address: </label>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <br><br>
+
+        <hr>
+
+        <h1>Payment Details</h1>
+
+        <label for="card">Select the card: </label>
+        <select name="card_type" id="card">
+            <option value="none">--select--</option>
+            <option value="rupay">Rupay</option>
+            <option value="visa">Visa</option>
+            <option value="mastercard">mastercard</option>
+        </select>
+        <br><br>
+
+        <label for="cvv">cvv</label>
+        <input type="password" name="" id="cvv">
+        <br><br>
+
+        <label for="expiry">Expiry</label>
+        <input type="month" name="" id="expiry">
+
+
+        <button type="submit">submit</button>
+
+        
 
 
     </form>
