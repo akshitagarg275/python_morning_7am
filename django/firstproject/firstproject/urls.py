@@ -17,15 +17,16 @@ Including another URLconf
 # 127.0.0.1:8000
 # 127.0.0.1:8000/contact
 
-from django.http import HttpResponse
+# from django.http import HttpResponse
 
-def home(request):
-    return HttpResponse("<h1>Hello World </h1>")
+# def home(request):
+#     return HttpResponse("<h1>Hello World </h1>")
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", home , name = "home")
+    # path("", home , name = "home")
+    path("", include("hello.urls")),
 ]
