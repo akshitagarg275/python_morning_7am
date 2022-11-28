@@ -21,16 +21,16 @@
 
     <div class="container">
 
-      <form class="form-signin" method="post" action="">
+      <form class="form-signin" method="post" action="{% url 'vrequest' %}">
         {% csrf_token %}
         <h4 class="form-signin-heading">Add your video request here</h4>
         <div class="form-group">
           <label for="inputName" class="sr-only">Video title</label>
-          {{forms.videoname}}
+          {{form.videoname}}
         </div>
         <div class="form-group">
           <label for="comment" class="sr-only">Details to be discussed in video</label>
-             {{forms.videodesc}}           
+             {{form.videodesc}}           
         </div>
         <button class="btn btn-lg btn-success btn-block" type="submit">Submit</button>
       </form>
