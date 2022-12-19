@@ -7,6 +7,8 @@ name = "pypi"
 django = "*"
 pillow = "*"
 djangocms-admin-style = "*"
+psycopg2 = "*"
+django-ckeditor = "*"
 
 [dev-packages]
 
