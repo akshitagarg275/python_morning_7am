@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content%}
+
+<main class="single-page-tubers">
+    <div class="banner">
+      <img src="{% static './assets/images/bg-banner.png' %}" alt="" class="img-fluid w-100">
+      <h1 class="text-center">
+        Tubers
+      </h1>
+    </div>
+
+
+
+    <section class="head container mt-5 mb-5">
+      <div class="row">
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+          <h1 class="text-center">{{ytuber.name}}</h1>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+          <h1 class="text-accent text-center">
+            $400
+          </h1>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+          <img src="{{ytuber.photo.url}}" class="img-fluid" alt="team-member">
+        </div>
+      </div>
+    </section>
+    <section class="video container text-center">
+      <!-- <img src="https://youtube.com/{{ytuber.video_url}}" class="img-fluid" alt="team-member"> -->
+
+    </section>
+    <section class="descritpion container">
+      <h4>Descritpion</h4>
+      <p class="mt-2 mb-2">{{ytuber.description | safe}}</p>
+    </section>
+
+    <section class="container w-50">
+
+      <div class="person-description mt-2">
+        <button class="btn btn-accent"> {{ytuber.city}} </button>
+        <button class="btn btn-accent"> {{ytuber.age}} </button>
+        <button class="btn btn-accent"> {{ytuber.height}} </button>
+      </div>
+      <div class="person-description mt-2">
+        <button class="btn btn-accent"> {{ytuber.crew_type}} </button>
+        <button class="btn btn-accent"> {{ytuber.camera_type}} </button>
+        <button class="btn btn-accent"> {{ytuber.subs_count}} </button>
+      </div>
+
+    </section>
+
+    <section class="youtuber-form container mt-5 mb-5">
+      <div class="row">
+        <form class="col-md-8 offset-md-2" method="POST" action="{% url 'hiretubers' %}" >
+          {% csrf_token %}
+          {% if user.is_authenticated %}
+          <input type="hidden" name="user_id" value="{{user_id}}">
+          {% else %}
+          <input type="hidden" name="user_id" value="00">
+          {% endif %}
+          <h3 class="pt-2 pb-2">Fill the Form and reach out</h3>
+
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <input type="text" name="first_name" class="form-control" placeholder="First Name">
+            </div>
+            <div class="form-group col-md-4">
+              <input type="text" name="last_name" class="form-control" placeholder="Last Name">
+            </div>
+            <div class="form-group col-md-4">
+              {% if user.is_authenticated %}
+              <input type="email" name="email" value="{{user.email}}" required class="form-control" placeholder="Email">
+              {% else %}
+              <input type="email" name="email" required class="form-control" placeholder="Email">
+              {% endif %}
+            </div>
+          </div>
+
+          <div class="form-group">
+            <select name="tuber_name" id="inputState" class="form-control">
+              <option selected disabled hidden>Select tuber</option>
+              <option value="{{ytuber.name}}">{{ytuber.name}}</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <input type="text" name="city" class="form-control" placeholder="City">
+            </div>
+            <div class="form-group col-md-4">
+              <input type="text" name="state" class="form-control" placeholder="State">
+            </div>
+            <div class="form-group col-md-4">
+              <input type="text" name="phone" class="form-control" placeholder="Phone Number">
+            </div>
+
+          </div>
+
+          <div class="form-group pt-2">
+            <textarea class="form-control" rows="3" placeholder="Details Message"></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-accent">Contact Us</button>
+          </div>
+
+        </form>
+      </div>
+
+    </section>
+
+  </main>
+
+
+{% endblock %}
